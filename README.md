@@ -1,4 +1,4 @@
-# Geektime Rust 语言训练营
+# Rust template
 
 ## 环境设置
 
@@ -48,8 +48,6 @@ pre-commit 是一个代码检查工具，可以在提交代码前进行代码检
 pipx install pre-commit
 ```
 
-安装成功后运行 `pre-commit install` 即可。
-
 ### 安装 Cargo deny
 
 Cargo deny 是一个 Cargo 插件，可以用于检查依赖的安全性。
@@ -81,3 +79,11 @@ cargo nextest 是一个 Rust 增强测试工具。
 ```bash
 cargo install cargo-nextest --locked
 ```
+### 安装pre-commit
+```bash
+pre-commit install
+```
+### 修改配置文件
+
+将cliff.toml里的`postprocessors = [{ pattern = '\$REPO', replace = "https://github.com/tyrchen/geektime-rust-live-coding" }, # replace repository URL]`git仓库地址改为远程仓库地址
+
